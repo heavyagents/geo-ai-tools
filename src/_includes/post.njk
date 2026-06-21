@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+<style>
+  article h1 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; color: #f3ece0; }
+  .post-meta { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+  article h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; color: #e0d8cc; }
+  article h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #c8c0b4; }
+  article p { margin-bottom: 1.1rem; }
+  article ul, article ol { margin: 0.75rem 0 1.1rem 1.5rem; }
+  article li { margin-bottom: 0.35rem; }
+  article code { background: #1e1e1e; border: 1px solid #333; border-radius: 4px; padding: 0.15em 0.4em; font-size: 0.88em; color: #22d3ee; }
+  article pre { background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 1.25rem; overflow-x: auto; margin: 1.25rem 0; }
+  article pre code { background: none; border: none; padding: 0; color: #c8c0b4; }
+  article table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9rem; }
+  article th { background: #1a1a1a; padding: 0.6rem 0.9rem; text-align: left; border: 1px solid #333; color: #22d3ee; }
+  article td { padding: 0.6rem 0.9rem; border: 1px solid #2a2a2a; }
+  article blockquote { border-left: 3px solid #22d3ee; padding: 0.75rem 1rem; margin: 1.25rem 0; background: #151515; color: #a0a0a0; }
+  .author-bio { margin-top: 3rem; padding: 1.25rem; background: #151515; border: 1px solid #222; border-radius: 8px; font-size: 0.9rem; color: #888; }
+</style>
+<article>
+  <h1>{{ title }}</h1>
+  <div class="post-meta">{{ date | date: "%B %d, %Y" }}</div>
+  {{ content | safe }}
+</article>

@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Blog
+description: AI tools reviews, tutorials and guides by Geo Vega.
+---
+<style>
+  h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.4rem; color: #f3ece0; }
+  .subtitle { color: #666; margin-bottom: 2rem; font-size: 0.95rem; }
+  .post-list { list-style: none; }
+  .post-list li { border-bottom: 1px solid #1a1a1a; padding: 1.1rem 0; }
+  .post-list a { font-size: 1.05rem; font-weight: 600; color: #e8e2d9; }
+  .post-list a:hover { color: #22d3ee; text-decoration: none; }
+  .post-date { font-size: 0.82rem; color: #555; margin-top: 0.2rem; }
+</style>
+<h1>Blog</h1>
+<p class="subtitle">AI tools reviewed and explained from a practitioner's perspective.</p>
+<ul class="post-list">
+{% for post in collections.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+  </li>
+{% else %}
+  <li style="color:#555;font-style:italic">No posts yet.</li>
+{% endfor %}
+</ul>

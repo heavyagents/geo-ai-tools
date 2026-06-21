@@ -1,0 +1,12 @@
+{
+  "name": "geo-ai-tools",
+  "version": "1.0.0",
+  "description": "AI tools reviews, tutorials and guides",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
